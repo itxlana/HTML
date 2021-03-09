@@ -1,0 +1,15 @@
+package com.example.ejercicioclase3
+
+class UseCase(val name: String){
+
+    var complexity : Int = 0
+    var observations : String = ""
+    var type : String? = null
+    
+    fun printName(){
+
+        println("$name")
+        println(name)
+    }
+
+}

@@ -1,0 +1,137 @@
+package com.example.ejercicio1
+import java.lang.Math
+fun main(){
+    println("Hola mundo")
+
+    val A = 2 //constante
+    val b: Int = 2
+    val c: Int 
+
+    println("$a $b $c")
+
+    //variables
+    var x = 2
+    var y : Int = 2
+    var z : Int
+    Z = 2
+
+    println("$x $y $z")
+
+    var t : Int = x + y
+
+    var objectNull : String?//con el signo de interrogacion puede ser null
+    objectNull = null
+
+    println(objectNull)
+
+    addUseCase(name: "Vender producto")
+    println("$a $x ${addUseCase(name: "Emitir factura")}")//imprimir una funcion
+
+    println(calculateThecnicalFactors(weight: 45, value:23))
+    println("El resultado ${calculateThecnicalFactors(weight: 45, value:23)}")
+
+    var valor : = -66//definicion implicita
+
+    println(valor.enableABS(enable: false))
+
+    getFactors()
+    getFactors(by: "Technical")
+    getFactors(by: "ambiental", asc: true)
+
+    getActors(actor1: "Vendedor", actor2: "Comprador", actor3: "Supervisor")
+
+    gerUseCases(...usecases: "CU1", "CU2", "CU3")
+
+    darNombreCalificacion(...calificaciones: "5", "7", "NP", "NA")
+
+}//main
+
+fun addUseCase(name: String){//por defecto es void
+    println("El caso de uso es $name")
+}
+
+fun setComplexityActor(value : Int): Unit{//unit es igual a void
+
+
+}
+
+fun calculateThecnicalFactors(weight: Int, value: Int): Int{
+
+    return weight * value
+}
+/*
+fun calculateEnviromentFactors(weight: Int, value: Int): Int{
+
+    return weight * value
+}
+*/
+
+fun calculateEnviromentFactors(weight: Int, value: Int) : Int = weight * value
+
+infix fun Int.enableABS(enable : Boolean) : Int{
+
+    if (enable) return abs(this)
+    return this
+    //version abreviada de:
+    /*
+    if (enable) {
+        return abs(this)
+    } else {
+        return this
+    }
+    
+    */
+}
+
+fun getFactors(){
+    println("Recupera todos los factores ")
+}
+
+fun getFactors(by : String){
+    println("Recupera los factores si son de tecnico o ambiental ")
+}
+
+fun getFactors(by : String, asc : Boolean = true){
+    println("Recupera los factores si son de tipoi tecnico o ambiental y los ordena")
+}
+/*
+fun getActors(actor1: String, actor2: String, actor3: String){
+
+    println("$actor1, $actor2, $actor3")
+}
+*/
+
+fun getUseCases(vararg usecases: String){ //recibir muchos parametros como un arreglo dinamico
+
+    for (usecase:String in usecases){
+
+        println("$usecase")
+
+    }
+
+    println()
+
+    var i = 0
+
+    while (i < usecases.size){
+        print("${usecases[i]}")
+        i++
+    }
+
+    println()
+}
+
+fun darNombreCalificacion(vararg calificaciones: String){
+    for(calificacion in calificaciones){
+        println(calificacion)
+
+        when(calificacion){
+
+            "NA" -> println("No paso el curso")
+
+            "NP" -> println("No asistio al curso")
+        }
+
+        println()
+    }
+}

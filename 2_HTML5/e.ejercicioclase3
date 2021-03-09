@@ -1,0 +1,22 @@
+package com.example.ejercicioclase3
+
+fun main(){
+
+    val PI = 3.1416
+    val a = 2
+
+    fun juego(){
+        println("Funcion sin párametros")
+    }
+
+    fun intro(by: String){
+        println("Hola, soy una función")
+
+        var x = 0
+        val z: Int = 10
+        while(x < z){
+            x= x + 1
+        }
+
+    }
+}

@@ -1,0 +1,12 @@
+package com.example.ejercicioclase3
+
+class Actor consturctor(val name : String){
+
+    fun printlnMessage(){
+        print("Esta es mi primera clase")
+    }
+
+    fun printName(){
+        println("$name")
+    }
+}

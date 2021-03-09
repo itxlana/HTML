@@ -1,0 +1,8 @@
+package com.example.ejercicioclase3
+
+class Factor (val name : String){
+
+    fun calculate(){
+        println("Estoy calculando")
+    }
+}
